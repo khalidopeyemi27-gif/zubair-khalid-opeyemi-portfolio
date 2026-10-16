@@ -13,17 +13,18 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-slate-950 border-b border-slate-800">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-slate-950 border-b border-slate-800/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12 items-start">
 
           {/* Left Column: Direct Links & Email */}
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-teal-400 font-semibold">
-              Contact & Links
+            <span className="text-xs font-mono uppercase tracking-widest text-teal-400 font-semibold flex items-center gap-2 mb-2">
+              <Mail className="w-3.5 h-3.5" />
+              <span>06 // Contact & Direct Outreach</span>
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-1 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1 mb-4">
               Get In Touch
             </h2>
             <p className="text-sm text-slate-300 leading-relaxed mb-6">
@@ -31,8 +32,8 @@ export const ContactSection: React.FC = () => {
             </p>
 
             <div className="space-y-3 mb-6">
-              <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center gap-3">
-                <div className="p-2.5 rounded bg-slate-950 border border-slate-800 text-teal-400 shrink-0">
+              <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 text-teal-400 shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
@@ -51,7 +52,7 @@ export const ContactSection: React.FC = () => {
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile (opens in new tab)"
                 title="GitHub Profile"
-                className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 min-h-[44px]"
+                className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 min-h-[44px]"
               >
                 <Github className="w-4 h-4 text-teal-400" />
                 <span>GitHub</span>
@@ -63,7 +64,7 @@ export const ContactSection: React.FC = () => {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile (opens in new tab)"
                 title="LinkedIn Profile"
-                className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 min-h-[44px]"
+                className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 min-h-[44px]"
               >
                 <Linkedin className="w-4 h-4 text-teal-400" />
                 <span>LinkedIn</span>
@@ -73,7 +74,7 @@ export const ContactSection: React.FC = () => {
                 href={PersonalProfileLinks.resume}
                 aria-label="Request Resume via Email"
                 title="Request Resume (Opens email draft to Khalidopeyemi27@gmail.com)"
-                className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 min-h-[44px]"
+                className="px-3.5 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white flex items-center gap-2 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 min-h-[44px]"
               >
                 <FileText className="w-4 h-4 text-teal-400" />
                 <span>Resume (Request)</span>
@@ -81,8 +82,8 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Simple Message Form */}
-          <div className="p-6 rounded-xl bg-slate-900 border border-slate-800">
+          {/* Right Column: Direct Message Transmission Form */}
+          <div className="p-6 sm:p-7 rounded-xl bg-slate-900/80 border border-slate-800">
             {submitted ? (
               <div className="py-8 text-center space-y-3">
                 <div className="w-10 h-10 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center mx-auto border border-teal-500/30">
@@ -104,7 +105,7 @@ export const ContactSection: React.FC = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-3">
+              <form onSubmit={handleSubmit} className="space-y-3.5">
                 <h3 className="text-sm font-bold text-white mb-2">Send a Message</h3>
 
                 <div>

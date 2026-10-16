@@ -1,7 +1,12 @@
 @import "tailwindcss";
 
-/* Subtle engineering blueprint grid pattern */
-.bg-grid-pattern {
-  background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+/* Subtle, restrained engineering grid pattern */
+.bg-grid-subtle {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Subtle linear technical blueprint accent line */
+.technical-border {
+  border-color: rgba(30, 41, 59, 0.8);
 }
